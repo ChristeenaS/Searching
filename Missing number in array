@@ -1,5 +1,10 @@
 def MissingNumber(self,array,n):
-        Sum=0
+       xor=0
+        
         for i in array:
-            Sum+=i
-        return ((n*(n+1))//2)-Sum
+            xor=xor^i
+        
+        for i in range(1,len(array)+2):
+            xor=xor^i
+
+        return xor
